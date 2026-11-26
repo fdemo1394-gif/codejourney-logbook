@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeJourney Logbook — Track, practice, grow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard" data-view="dashboard"><span class="brand-mark">&lt;/&gt;</span><span>CodeJourney Logbook</span></a>
+      <p class="eyebrow side-label">YOUR SPACE</p>
+      <nav class="nav-list">
+        <button class="nav-item active" data-view="dashboard"><span>⌂</span> Overview</button>
+        <button class="nav-item" data-view="projects"><span>▣</span> My projects <b id="project-count">0</b></button>
+        <button class="nav-item" data-view="lessons"><span>✦</span> Lessons learned <b id="lesson-count">0</b></button>
+        <button class="nav-item" data-view="practice"><span>▷</span> Practice lab</button>
+        <button class="nav-item" data-view="notes"><span>▤</span> Coding notes</button>
+        <button class="nav-item" data-view="chat"><span>◌</span> CodeBuddy</button>
+        <button class="nav-item" data-view="guide"><span>☼</span> Beginner guide</button>
+      </nav>
+      <div class="sidebar-tip"><span class="tip-icon">✺</span><strong>Small steps add up.</strong><p>Every bug you solve is proof that you are growing.</p></div>
+      <div class="sidebar-footer"><span class="avatar">S</span><div><strong>My coding space</strong><small>Saved on this device</small></div></div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="mobile-brand">&lt;/&gt; CodeJourney</div><div class="topbar-actions"><span class="streak">🔥 <strong id="streak-count">1</strong> day streak</span><button class="icon-button" id="clear-data" title="Clear all data">⋯</button></div></header>
+
+      <section class="view active" id="dashboard-view">
+        <div class="hero"><div><p class="eyebrow">WEDNESDAY, 26 NOVEMBER 2026</p><h1>Keep going, <span>builder.</span></h1><p class="hero-copy">Your coding journey is made one curious question at a time.</p></div><div class="hero-orbit"><div class="orbit-line"></div><span>✦</span><span>●</span><span>⌁</span></div></div>
+        <div class="stats-grid"><article class="stat-card"><div class="stat-icon purple">▣</div><p>Projects in progress</p><strong id="stat-projects">0</strong><small>Keep experimenting</small></article><article class="stat-card"><div class="stat-icon yellow">✦</div><p>Lessons captured</p><strong id="stat-lessons">0</strong><small>Knowledge that sticks</small></article><article class="stat-card"><div class="stat-icon mint">☼</div><p>Current focus</p><strong id="stat-focus">Start here</strong><small id="focus-subtext">Add your first project</small></article></div>
+        <div class="content-grid"><section class="panel journey-panel"><div class="panel-heading"><div><p class="eyebrow">YOUR JOURNEY</p><h2>Recent activity</h2></div><button class="text-button" data-view="projects">View projects →</button></div><div id="recent-activity" class="empty-state"><div class="empty-illustration">✎</div><h3>Your story starts here</h3><p>Add a project or lesson to see your progress appear.</p><button class="primary-button" data-open-form="project">+ Add your first project</button></div></section><section class="panel prompt-panel"><div class="prompt-spark">✦</div><p class="eyebrow">A LITTLE PROMPT</p><h2>What did you figure out today?</h2><p>Even if it feels tiny, writing it down helps your brain remember it.</p><button class="secondary-button" data-open-form="lesson">Capture a lesson <span>→</span></button></section></div>
+      </section>
+
+      <section class="view" id="projects-view"><div class="page-heading"><div><p class="eyebrow">YOUR WORKSHOP</p><h1>My projects</h1><p>Projects are where ideas become skills.</p></div><button class="primary-button" data-open-form="project">+ New project</button></div><div id="projects-list" class="cards-grid"></div></section>
+      <section class="view" id="lessons-view"><div class="page-heading"><div><p class="eyebrow">YOUR NOTEBOOK</p><h1>Lessons learned</h1><p>Keep the “aha!” moments close.</p></div><button class="primary-button" data-open-form="lesson">+ Capture lesson</button></div><div id="lessons-list" class="lesson-list"></div></section>
+      <section class="view" id="practice-view"><div class="page-heading"><div><p class="eyebrow">YOUR PLAYGROUND</p><h1>Practice lab</h1><p>Try ideas, make mistakes, and see what happens.</p></div><div class="practice-actions"><button class="secondary-button" id="fullscreen-code">⛶ Full screen</button><select id="language-select" aria-label="Choose practice language"><option value="javascript">JavaScript</option><option value="python">Python</option></select><button class="secondary-button" id="reset-code">Reset example</button><button class="primary-button" id="run-code">▶ Run code</button></div></div><div class="practice-layout"><aside class="file-explorer"><p class="explorer-title">EXPLORER</p><div class="folder">⌄ <strong>CODING JOURNEY</strong></div><button class="file-row active" id="file-name"><span>JS</span> practice.js</button><div class="practice-tip"><strong>Try this</strong><p>Change the name or number in the code, then run it.</p></div></aside><div class="editor-wrap"><div class="editor-tab" id="editor-tab"><span>JS</span> practice.js <i>●</i></div><div class="editor-area"><div class="line-numbers" id="line-numbers">1<br>2<br>3<br>4<br>5<br>6</div><textarea id="code-editor" spellcheck="false" aria-label="JavaScript code editor"></textarea></div><div class="editor-status"><span id="language-status">JavaScript</span><span>UTF-8</span></div><div class="output-heading"><strong>OUTPUT</strong><button id="clear-output">Clear</button></div><pre class="output" id="code-output">Click “Run code” to see your output here.</pre></div></div></section>
+      <section class="view" id="notes-view"><div class="page-heading"><div><p class="eyebrow">YOUR MINI HANDBOOK</p><h1>Simplified coding notes</h1><p>Small explanations you can understand and remember.</p></div></div><div class="notes-toolbar"><input id="notes-search" type="search" placeholder="Search notes, like loops or Python..." aria-label="Search coding notes"><span id="notes-result-count"></span></div><div id="notes-list" class="notes-grid"></div></section>
+      <section class="view" id="chat-view"><div class="page-heading"><div><p class="eyebrow">YOUR LEARNING COMPANION</p><h1>Chat with CodeBuddy</h1><p>Ask questions in simple language while you learn.</p></div></div><div class="chat-layout"><div class="chat-panel"><div class="chat-header"><span class="buddy-avatar">✦</span><div><strong>CodeBuddy</strong><small>Beginner coding helper</small></div><span class="online-dot">●</span></div><div id="chat-messages" class="chat-messages"><div class="chat-message bot"><strong>CodeBuddy</strong><p>Hi! I’m here to help you learn. Ask me something like “What is a variable?” or “Why is my loop not working?”</p></div></div><div class="chat-suggestions"><button data-question="What is a variable?">What is a variable?</button><button data-question="Explain loops simply">Explain loops</button><button data-question="How do I fix an error?">Fix an error</button></div><form id="chat-form" class="chat-form"><input id="chat-input" required placeholder="Ask a coding question..." aria-label="Ask CodeBuddy"><button class="primary-button" type="submit">Send</button></form></div><aside class="chat-side-note"><div class="prompt-spark">✦</div><h2>Ask without fear</h2><p>There are no silly questions here. A good question is the beginning of a good lesson.</p><ul><li>Ask for a simpler explanation.</li><li>Paste a small error message.</li><li>Ask for an example.</li></ul></aside></div></section>
+      <section class="view" id="guide-view"><div class="page-heading"><div><p class="eyebrow">YOUR COMPASS</p><h1>Beginner guide</h1><p>Notes made from your journey, just for you.</p></div><button class="primary-button" id="generate-notes">✦ Refresh notes</button></div><div id="guide-content" class="guide-content"></div></section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modal-backdrop"><div class="modal"><button class="modal-close" id="modal-close">×</button><p class="eyebrow" id="modal-eyebrow">ADD TO YOUR JOURNEY</p><h2 id="modal-title">New project</h2><form id="entry-form"><input type="hidden" id="entry-type"><label>Title<input id="entry-title" required placeholder="e.g. My first portfolio"></label><label id="description-label">What are you building?<textarea id="entry-description" rows="3" required placeholder="Describe it in your own words..."></textarea></label><label id="topic-label">Topic or technology<input id="entry-topic" placeholder="e.g. HTML & CSS"></label><label id="status-label">Status<select id="entry-status"><option>In progress</option><option>Planning</option><option>Completed</option></select></label><button class="primary-button full-button" type="submit">Save to my journey</button></form></div></div>
+  <script src="https://cdn.jsdelivr.net/pyodide/v314.0.8/full/pyodide.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
