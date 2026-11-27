@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#252238" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="manifest" href="manifest.json" />
   <meta name="description" content="CodeJourney Logbook is a beginner-friendly coding journal for tracking projects, capturing lessons, practicing JavaScript and Python, and learning with CodeBuddy." />
   <meta name="keywords" content="coding journal, learn to code, beginner coding, JavaScript practice, Python practice, coding projects" />
   <meta name="author" content="CodeJourney Logbook" />
@@ -35,6 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="roadmap.css" />
+  <link rel="stylesheet" href="pwa.css" />
 </head>
 <body>
   <div class="app-shell">
@@ -56,7 +60,7 @@
     </aside>
 
     <main class="main-content">
-      <header class="topbar"><div class="mobile-brand">&lt;/&gt; CodeJourney</div><div class="topbar-actions"><span class="streak">🔥 <strong id="streak-count">1</strong> day streak</span><button class="icon-button" id="clear-data" title="Clear all data">⋯</button></div></header>
+      <header class="topbar"><div class="mobile-brand">&lt;/&gt; CodeJourney</div><div class="topbar-actions"><button class="install-button" id="install-app">↓ Install app</button><span class="streak">🔥 <strong id="streak-count">1</strong> day streak</span><button class="icon-button" id="clear-data" title="Clear all data">⋯</button></div></header>
 
       <section class="view active" id="dashboard-view">
         <div class="hero"><div><p class="eyebrow">WEDNESDAY, 26 NOVEMBER 2026</p><h1>Keep going, <span>builder.</span></h1><p class="hero-copy">Your coding journey is made one curious question at a time.</p></div><div class="hero-orbit"><div class="orbit-line"></div><span>✦</span><span>●</span><span>⌁</span></div></div>
@@ -78,5 +82,6 @@
   <script src="https://cdn.jsdelivr.net/pyodide/v314.0.8/full/pyodide.js"></script>
   <script src="app.js"></script>
   <script src="roadmap.js"></script>
+  <script src="pwa.js"></script>
 </body>
 </html>

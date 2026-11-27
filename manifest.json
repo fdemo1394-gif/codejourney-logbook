@@ -1,0 +1,19 @@
+{
+  "name": "CodeJourney Logbook",
+  "short_name": "CodeJourney",
+  "description": "A beginner-friendly coding roadmap, journal, and practice lab.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbfafc",
+  "theme_color": "#252238",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
