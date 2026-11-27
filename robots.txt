@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fdemo1394-gif.github.io/codejourney-logbook/sitemap.xml
