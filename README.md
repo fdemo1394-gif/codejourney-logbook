@@ -37,3 +37,7 @@ The repository includes an automatic GitHub Pages workflow. The repository owner
 4. Open https://fdemo1394-gif.github.io/codejourney-logbook/ and choose **↓ Install app**.
 
 The workflow will deploy future updates automatically.
+
+## Contact
+
+For feedback or questions, email [fdemo1394@gmail.com](mailto:fdemo1394@gmail.com).
