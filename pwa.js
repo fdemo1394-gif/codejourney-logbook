@@ -1,5 +1,6 @@
 let installPrompt;
 const installButton = document.querySelector('#install-app');
+document.title = 'CodeJourney - Learn to Code and Grow';
 
 window.addEventListener('beforeinstallprompt', event => {
   event.preventDefault();

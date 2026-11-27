@@ -1,6 +1,6 @@
-# CodeJourney Logbook
+# CodeJourney
 
-CodeJourney Logbook is a beginner-friendly coding journey app for tracking projects, saving lessons, reading simplified coding notes, practicing JavaScript and Python, and asking CodeBuddy for help.
+CodeJourney is a beginner-friendly coding journey app for tracking projects, saving lessons, reading simplified coding notes, practicing JavaScript and Python, and asking CodeBuddy for help.
 
 ## Website preview
 
