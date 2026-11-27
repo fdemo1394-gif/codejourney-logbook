@@ -1,7 +1,7 @@
 const CACHE_NAME = 'codejourney-v1';
 const APP_FILES = [
   './', './index.html', './styles.css', './roadmap.css', './app.js', './roadmap.js',
-  './manifest.json', './icon.svg', './preview.png'
+  './manifest.json', './icon.svg', './preview.png', './runner.js'
 ];
 
 self.addEventListener('install', event => {
