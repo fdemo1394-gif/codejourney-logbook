@@ -26,3 +26,14 @@ Open [`index.html`](./index.html) in a web browser.
 ## Live repository
 
 Visit the [CodeJourney Logbook GitHub repository](https://github.com/fdemo1394-gif/codejourney-logbook).
+
+## Publish the installable website
+
+The repository includes an automatic GitHub Pages workflow. The repository owner must enable Pages once:
+
+1. Sign in to GitHub and open **Settings → Pages** for this repository.
+2. Set **Source** to **GitHub Actions** and save.
+3. Wait for the **Deploy CodeJourney Logbook** workflow to finish.
+4. Open https://fdemo1394-gif.github.io/codejourney-logbook/ and choose **↓ Install app**.
+
+The workflow will deploy future updates automatically.
